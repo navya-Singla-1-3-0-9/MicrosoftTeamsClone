@@ -95,6 +95,8 @@ Peer.js
 ![image](https://user-images.githubusercontent.com/80400920/125491107-5e3420f6-96f5-45a2-ae4b-9460389f5026.png)
 ###### Change Font properties and alignment
 ![image](https://user-images.githubusercontent.com/80400920/125491273-09cea900-d3cf-4fcb-bf3c-98461441f35a.png)
+###### View Captions
+![image](https://user-images.githubusercontent.com/60549106/125591370-a029c091-1cb5-45b6-9db5-cf873676b5b3.png)
 ###### Meeting messages saved to group chat
 ![image](https://user-images.githubusercontent.com/80400920/125491413-40dc4a0e-a1b5-44ed-932f-92d736e54ec1.png)
 
