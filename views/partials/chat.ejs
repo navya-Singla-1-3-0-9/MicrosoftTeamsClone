@@ -1,0 +1,144 @@
+<script type="text/javascript">
+	const group= "<%=grpname%>"
+</script>
+
+
+<div class="row">
+
+
+	<div class="col-lg-3 my---groups">		
+		<div class="groups">
+			<h3>My Groups</h3>
+			<div class="bb-underline" style="border-color: #5acccc;"></div>
+			<%for(let g of grps){%>
+				<%let i=g.indexOf('---')%>
+					<%if(g==grpname){%>
+					<div class="selected-group grp">
+						<h4 class="<%=g%>"><%=g.substring(0,i)%></h4>
+					</div>
+					<%}else{%>
+					<div class="grp">
+						<h4 class="<%=g%>"><%=g.substring(0,i)%></h4>
+					</div>
+					<%}%>
+				<hr>
+			<%}%>
+		</div>
+		<form class="create">
+			<input type="text" name="group" placeholder="type group name" id="grpname">
+			<button type="submit" class="btn btn-info rounded-pill newgrp" >CREATE NEW GROUP</button>
+		</form>
+	</div>
+	
+
+
+
+	<div class="col-lg-6 chats">
+		  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+		    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Chats</a>
+		    <a class="nav-item nav-link" id="nav-logs-tab" data-toggle="tab" href="#nav-logs" role="tab" aria-controls="nav-logs" aria-selected="false">Call-Logs</a>
+		   
+		  </div>
+		</nav>
+		<div class="tab-content" id="nav-tabContent">
+		  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+		  	<div  class="chat_window">
+    		<div  class="top_menu">
+    			<div  class="buttons">
+    				<div  class="button close"></div>
+				    <div  class="button minimize"></div>
+				    <div  class="button maximize"></div>
+				</div>    
+			</div>
+			<%if(grpname){%>
+					<div class="chat-header">
+						<%let i=(grpname?grpname.indexOf("---"):0)%>
+						<h5 style="display: inline;"><%=grpname?grpname.substring(0,i):""%></h5>
+						<button class="btn btn-info rounded-pill add <%=grpname%>">+</button>
+						<button class="btn btn-info rounded-pill call <%=grpname%>">Start call</button>
+						<span style="margin-left:20%;">
+						<button class="btn btn-danger leave <%=grpname%>">Leave Group</button>
+						</span>
+					</div>
+			<%}%>
+			<div id="myModal" class="modal">
+
+			  <!-- Modal content -->
+				  <div class="modal-content">
+					    <h2 class="text-center">INCOMING CALL</h2>
+					    
+							    <button class="btn btn-success rounded-pill answer <%=grpname%>" style="margin-bottom: 20px;">Answer</button>
+							
+							    <button class="btn btn-danger rounded-pill decline <%=grpname%>">Decline</button>
+							
+					    </div>
+
+
+				  </div>
+
+
+		
+
+			</div>
+
+
+			<hr style="color: black; background-color: black; margin-bottom: 20px;">
+    		<ul id="messages"  class="messages">
+		    	<%for(let g of grps){%>
+			    	<%if(g==grpname){%>		    	
+						<%for(let i=0;i<=chats[g].length-1;i++){%>
+							<li style="list-style-type: none" class="msg <%=chats[g][i].sender==username? 'me': 'other'%>">
+								<p><b><%=chats[g][i].sender==username? "me": chats[g][i].sender%></b></p>
+								<p><%=chats[g][i].message%></p>
+							</li>						
+						<%}%>
+					<%}%>
+				<%}%>
+    		</ul>
+			<div  class="bottom_wrapper clearfix">
+				<i  id="typing"></i>
+				<%if(grpname){%>
+				    <form  id="form">
+				        <div  class="message_input_wrapper">
+					        <input  id="message"  class="message_input rounded-pill"  placeholder="Type your message here..." style="display: inline;" />
+					        <button type="submit" class="send_message btn btn-info rounded-pill">Send <i class="fas fa-paper-plane"></i></button>
+				        </div>			       
+				    </form>
+			    <%}%>
+			</div>
+
+
+		  	
+		  </div>
+		  <div class="tab-pane fade" id="nav-logs" role="tabpanel" aria-labelledby="nav-logs-tab">
+		  	<h3 class="logs">Call Logs</h3>
+		  	<hr>
+		  	<%for(let call of calls){%>
+		  		<h6><%=call%></h6>
+		  		<hr>
+		  	<%}%>
+		  </div>
+		  
+		</div>
+		
+
+
+		</div>
+	
+
+
+
+	<div class="col-lg-3 members">
+		<h3 style>Members</h3>
+		<div class="bb-underline"></div>
+			<%for(let member of members){%>
+				<div class="member"><%=member%></div>
+			<%}%>
+			<hr>
+		
+	</div>
+
+</div>
+
+<script src="js/chatRoom/chat.js"></script>
