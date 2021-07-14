@@ -35,7 +35,8 @@ For working prototype, visit https://tranquil-wave-13111.herokuapp.com/
 14. Make text Bold/Italic/Underline in Notes
 15. Change font-color and text-alignment in notes
 16. Download Notes as .txt file 
-17. End meeting option
+17. Captions on speaking during the meeting
+18. End meeting option
    
 
 # Technology Stack
