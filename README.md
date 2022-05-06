@@ -100,8 +100,7 @@ Peer.js
 ###### Meeting messages saved to group chat
 ![image](https://user-images.githubusercontent.com/80400920/125491413-40dc4a0e-a1b5-44ed-932f-92d736e54ec1.png)
 
-# Video Demo:
-https://vimeo.com/573858508
+
 # Agile Methodology presentation:
 https://docs.google.com/presentation/d/1CZr12sPOvNUCB8lnNpaY57yviYknzmDml8DH8nbDK1Y/edit?usp=sharing
 
