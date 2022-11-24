@@ -1,7 +1,7 @@
 # Microsoft-Teams-Clone
 Through this platform, different users can connect with each other via video calls, chat, and collaborate with each other. This application provides the user with the option to either collaborate in team or have one-to-one interation with their friends or colleagues.
 
-For working prototype, visit https://tranquil-wave-13111.herokuapp.com/
+For working prototype, visit https://smart-conference.onrender.com/
 
 # Features
 ### Authentication
